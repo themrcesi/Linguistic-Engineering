@@ -4,8 +4,10 @@ ayuntamiento
 vivienda
 eta
 pnv
-informes (-)
-deshaucio (s)
+informes
+informe
+deshaucio
+deshaucios
 militares
 código penal
 congreso

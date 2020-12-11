@@ -1,10 +1,13 @@
 expertos
-alergia (s)
+alergia
+alergias
 fruta
 pecho
 coronavirus
-tratamiento (s)
-estudios (-)
+tratamiento
+tratamientos
+estudios
+estudio
 covid
 metabolismo
 miocardio

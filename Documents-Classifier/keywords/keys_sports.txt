@@ -1,16 +1,22 @@
 mercado
-jugador (es) (as) (a)
+jugador
+jugadores
 liga
-temporada (s)
+temporada
+temporadas
 goles
 campeones
 estrella
 rehabilitación
 franquicia
-equipo (s)
-grupos (-)
+equipo
+equipos
+grupo
+grupos
 juego
 firmar
-lesión (es)
-entrenador (a) (es) (as)
+lesión
+lesiones
+entrenador
+entrenadores
 pista
