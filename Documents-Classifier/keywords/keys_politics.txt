@@ -1,29 +1,30 @@
-eutanasia
-regulación
-ayuntamiento
-vivienda
-eta
-pnv
-informes
-informe
-deshaucio
-deshaucios
-militares
-código penal
-congreso
-comunidades
-presupuestos generales
-proyecto
-bildu
-vox
-instituciones
-independentistas
-erc
+desahucio
 sociedad
-casa real
-penal
-ministro
-ciudadanos
 ley
+ayuntamiento
+generales
+independentistas
+pnv
+presupuestos generales
+ciudadanos
+psoe
+pp
+vox
+podemos
+erc
+bildu
+código penal
+regulación
+proyecto
+eutanasia
+instituciones
 acuerdos
+casa real
+vivienda
 diputados
+ministro
+informes
+congreso
+eta
+militares
+comunidades
