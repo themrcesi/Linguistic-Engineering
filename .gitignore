@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+Documents-Classifier/src/keys.dict
+
+Documents-Classifier/src/keys.index
+
+Documents-Classifier/src/keys.mm
+
+Documents-Classifier/src/keys.mm.index
+
+Documents-Classifier/src/word2vec.model
