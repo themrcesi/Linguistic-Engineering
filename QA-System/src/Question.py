@@ -63,7 +63,7 @@ class PrizeQuestion(Question):
         elif self.num_rule == 2: # qué premios
             self.answer = " - ".join([premio["institucion"] + ": " + premio["categorias"] for premio in premios])
         
-        elif self.num_rule == 3:
+        elif self.num_rule == 3: # en qué años
             self.answer = ", ".join(list(set([premio["año"] for premio in premios])))
         
         elif self.num_rule == 4: # más de

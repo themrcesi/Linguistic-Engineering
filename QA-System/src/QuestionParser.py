@@ -17,7 +17,7 @@ class Parser():
 
     def parse(self):
         q = self.question.lower()
-
+        print(q)
         # TÍTULO
         if ("cuál" in q or "cual" in q) and "original" in q and ("nombre" in q or "título" in q):
             quest = TitleQuestion(q)
@@ -63,9 +63,9 @@ class Parser():
             quest = PrizeQuestion(q, 5, value)
         elif ("cuántos" in q or "cuantos" in q) and "premios" in q: # cuántos premios
             quest = PrizeQuestion(q, 1)
-        elif ("cuando" in q or "cuándo" in q or "en qué años" in q or "en que años") and "premios" in q:
+        elif re.findall("((en (qué|que) años)|(cuando|cuándo)).+premios",q):#(("cuando" in q or "cuándo" in q) or ("en qué años" in q or "en que años") and "premios" in q):
             quest = PrizeQuestion(q, 3)
-        elif ("qué" in q or "que" in q) and "premios" in q: # qué premios MIRAR
+        elif re.findall("(que|qué).premios", q): #("qué" in q or "que" in q) and "premios" in q: # qué premios MIRAR
             quest = PrizeQuestion(q, 2)
         elif ("gan" in q or "recib" in q) and ("algún premio" in q or "algun premio" in q):
             if re.findall("en (\d{4})", q): # ganado algún en x año
