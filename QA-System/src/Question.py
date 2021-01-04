@@ -32,7 +32,7 @@ class PremiereQuestion(Question):
         if self.num_rule == 0:
             self.answer = self.film["año"]
         elif self.num_rule == 1:
-            self.answer = "Si" if self.film["año"] == self.numeric_year else "No"
+            self.answer = "Si" if int(self.film["año"]) == int(self.numeric_year) else "No"
         elif self.num_rule == 2:
             self.answer = "Si" if int(self.film["año"]) < int(self.numeric_year) else "No"
         elif self.num_rule == 3:
