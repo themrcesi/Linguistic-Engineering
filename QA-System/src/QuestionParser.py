@@ -165,6 +165,8 @@ class Parser():
             quest.set_film(self.padrino)
         elif "psicosis" in q:
             quest.set_film(self.psycho)
+        else:
+            return IncorrectQuestion(q)
 
         return quest
 

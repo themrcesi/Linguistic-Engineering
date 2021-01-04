@@ -221,3 +221,10 @@ class ValoracionQuestion(Question):
         
         elif self.num_rule == 4: # cuánta gente valoró
             self.answer = valoracion["votos"]
+
+class IncorrectQuestion(Question):
+
+    def answer(self):
+        self.answer = "We don´t have answers for that film. Please introduce a correct film."
+    
+    

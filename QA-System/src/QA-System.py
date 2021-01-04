@@ -32,6 +32,7 @@ if __name__ == "__main__":
             break
 
         question = Parser(question).parse()
+    
         question.answer()
 
         print("Answer: ", question.get_answer())
