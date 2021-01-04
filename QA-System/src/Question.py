@@ -32,11 +32,11 @@ class PremiereQuestion(Question):
         if self.num_rule == 0:
             self.answer = self.film["año"]
         elif self.num_rule == 1:
-            self.answer = "Si" if self.film["año"] == self.numeric_year else "No"
+            self.answer = "Yes" if int(self.film["año"]) == int(self.numeric_year) else "No"
         elif self.num_rule == 2:
-            self.answer = "Si" if int(self.film["año"]) < int(self.numeric_year) else "No"
+            self.answer = "Yes" if int(self.film["año"]) < int(self.numeric_year) else "No"
         elif self.num_rule == 3:
-            self.answer = "Si" if int(self.film["año"]) > int(self.numeric_year) else "No"
+            self.answer = "Yes" if int(self.film["año"]) > int(self.numeric_year) else "No"
             
 class DurationQuestion(Question):
     def __init__(self, question, num_rule, minutes = None):
@@ -48,9 +48,9 @@ class DurationQuestion(Question):
         if self.num_rule == 0:
             self.answer = self.film["duración"]
         elif self.num_rule == 1:
-            self.answer = "Si" if int(self.film["duración"].split(' ')[0]) > int(self.minutes) else "No"
+            self.answer = "Yes" if int(self.film["duración"].split(' ')[0]) > int(self.minutes) else "No"
         elif self.num_rule == 2:
-            self.answer = "Si" if int(self.film["duración"].split(' ')[0]) < int(self.minutes) else "No"
+            self.answer = "Yes" if int(self.film["duración"].split(' ')[0]) < int(self.minutes) else "No"
             
 class DirectionQuestion(Question):
     def __init__(self, question, num_rule, director = None):
@@ -62,7 +62,7 @@ class DirectionQuestion(Question):
         if self.num_rule == 0:
             self.answer = self.film["dirección"]
         elif self.num_rule == 1:
-            self.answer = "Si" if self.director in self.film["dirección"].lower() else "No"
+            self.answer = "Yes" if self.director in self.film["dirección"].lower() else "No"
             
 class ScreenwritterQuestion(Question):
     def __init__(self, question, num_rule, screenwritter = None):
@@ -74,7 +74,7 @@ class ScreenwritterQuestion(Question):
         if self.num_rule == 0:
             self.answer = self.film["guión"]
         elif self.num_rule == 1:
-            self.answer = "Si" if self.screenwritter in self.film["guión"].lower() else "No"
+            self.answer = "Yes" if self.screenwritter in self.film["guión"].lower() else "No"
         elif self.num_rule == 2:
             self.answer = len(self.film["guión"].split(','))
             
@@ -99,7 +99,7 @@ class CastQuestion(Question):
                 self.principal_actors = len(all_actors)
             self.answer = ','.join(all_actors[:self.principal_actors])
         elif self.num_rule == 2:
-            self.answer = "Si" if self.actor in self.film["reparto"].lower() else "No"
+            self.answer = "Yes" if self.actor in self.film["reparto"].lower() else "No"
             
 class ProducerQuestion(Question):
 
@@ -116,7 +116,7 @@ class GenderQuestion(Question):
         if self.num_rule == 0:
             self.answer = self.film["género"]
         elif self.num_rule == 1:
-            self.answer = "Si" if self.gender in self.film["género"].lower() else "No"
+            self.answer = "Yes" if self.gender in self.film["género"].lower() else "No"
             
 class GroupQuestion(Question):
     def __init__(self, question, num_rule, saga = None):
@@ -128,7 +128,7 @@ class GroupQuestion(Question):
         if self.num_rule == 0:
             self.answer = self.film["grupos"]
         elif self.num_rule == 1:
-            self.answer = "Si" if self.saga in self.film["grupos"].lower() else "No"
+            self.answer = "Yes" if self.saga in self.film["grupos"].lower() else "No"
             
 class SynopsisQuestion(Question):
 

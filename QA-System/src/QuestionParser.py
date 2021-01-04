@@ -2,10 +2,10 @@ from DocumentProcessor import PreprocessorDocument
 from Question import *
 import re
 
-year_regex = 'en (el año)? \d{4}$'
+year_regex = 'en (el año )?(\d{4})$'
 
-before_year_regex = 'antes de (el año)? \d{4}$'
-after_year_regex = '(después|despues) de (el año)? \d{4}$'
+before_year_regex = 'antes de (el año )?(\d{4})$'
+after_year_regex = '(después|despues) de (el año )?(\d{4})$'
 
 duration_regex = '[0-9]+'
 
@@ -42,15 +42,18 @@ class Parser():
             
         elif ("se estrenó" in q or "se estreno" in q or "salió" in q or "salio" in q) \
                 and re.findall(year_regex, q) != []:
-            quest = PremiereQuestion(q,1, re.findall(year_regex, q)[0].split(' ')[-1])
+            year = re.findall(year_regex, q)[0][-1]
+            quest = PremiereQuestion(q,1, year)
             
         elif ("se estrenó" in q or "se estreno" in q or "salió" in q or "salio" in q) \
                 and re.findall(before_year_regex, q) != []:
-            quest = PremiereQuestion(q, 2, re.findall(before_year_regex, q)[0].split(' ')[-1])
+            year = re.findall(before_year_regex, q)[0][-1]
+            quest = PremiereQuestion(q, 2, year)
             
         elif ("se estrenó" in q or "se estreno" in q or "salió" in q or "salio" in q) \
                 and re.findall(after_year_regex, q) != []:
-            quest = PremiereQuestion(q, 3, re.findall(after_year_regex, q)[0][1].split(' ')[-1])
+            year = re.findall(after_year_regex, q)[0][-1]
+            quest = PremiereQuestion(q, 3, year)
             
         # DURACIÓN
         
