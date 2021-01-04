@@ -123,7 +123,6 @@ class Parser():
         elif re.findall("tiene (más|mas) (valoración |puntuación |valoracion |puntuacion )?de un (\d+)", q):
             value = re.findall("tiene (mas|más) (valoración |puntuación |valoracion |puntuacion )?de un (\d+)", q)[0][2]
             quest = ValoracionQuestion(q, 2, value)
-            print(value)
         elif re.findall("tiene menos (valoración |puntuación |valoracion |puntuacion )?de un (\d+)", q):
             value = re.findall("tiene menos (valoración |puntuación |valoracion |puntuacion )?de un (\d+)", q)[0][1]
             quest = ValoracionQuestion(q, 3, value)
